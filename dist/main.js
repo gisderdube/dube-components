@@ -405,16 +405,6 @@ const $fde1f6d1bd8ca142$var$Link = ({ external: external , ...props })=>{
     return /*#__PURE__*/ (0, $2EokO$reactjsxruntime.jsx)($fde1f6d1bd8ca142$var$StyledNextLink, {
         ...props
     });
-// const Wrapper = external ? React.Fragment : NextLink
-// const El = external ? StyledLink : StyledPlaceholder
-// const wrapperProps = external ? {} : { href }
-// return (
-//   <Wrapper {...wrapperProps}>
-//     <El href={external ? href : ''} {...props} lg={lg} disableHighlight={disableHighlight}>
-//       {directChildren ? children : <span className="caption">{children}</span>}
-//     </El>
-//   </Wrapper>
-// )
 };
 var $fde1f6d1bd8ca142$export$2e2bcd8739ae039 = $fde1f6d1bd8ca142$var$Link;
 
