@@ -12,13 +12,6 @@
     "build": "parcel build",
     "watch": "parcel watch"
   },
-  "type": "module",
-  "targets": {
-    "main": {
-      "isLibrary": true,
-      "outputFormat": "esmodule"
-    }
-  },
   "engines": {
     "node": "18",
     "npm": "9"
@@ -26,13 +19,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "uuid": "^9.0.0"
+  },
+  "peerDependencies": {
+    "next": "^13.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.9"
+  },
+  "devDependencies": {
     "next": "^13.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.9",
-    "uuid": "^9.0.0"
-  },
-  "devDependencies": {
     "@parcel/packager-ts": "^2.8.3",
     "@parcel/transformer-typescript-types": "^2.8.3",
     "@types/styled-components": "^5.1.26",
