@@ -6,7 +6,6 @@ import { defaultTheme } from './utils/theme'
 type LinkProps = {
   children: React.ReactNode
   disableHighlight?: boolean
-  directChildren?: boolean
   external?: boolean
   href: string
   lg?: boolean

@@ -94,7 +94,6 @@ export const Input: React.FC<InputProps>;
 type LinkProps = {
     children: React.ReactNode;
     disableHighlight?: boolean;
-    directChildren?: boolean;
     external?: boolean;
     href: string;
     lg?: boolean;
