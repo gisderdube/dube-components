@@ -18,6 +18,7 @@ const baseStyles = css<HeadingProps>`
     css`
       max-width: 450px;
     `}
+
   color: ${(props) => (props.light ? props.theme.colors.light : props.theme.colors.dark)};
   font-family: ${(props) => props.theme.fonts.heading};
   margin-bottom: 0.6rem;
@@ -62,7 +63,7 @@ export default function Heading({
   h3,
   h4,
   ...props
-}) {
+}: HeadingProps & React.HTMLAttributes<HTMLHeadingElement>) {
   const Comp = h2 ? H2 : h3 ? H3 : h4 ? H4 : H1
 
   return (

@@ -63,7 +63,17 @@ const Input: React.FC<InputProps> = ({
 
   const [isFocused, setFocused] = useState(false)
 
-  const InputEl = textarea ? StyledTextarea : StyledInput
+  const inputProps = {
+    onFocus: () => setFocused(true),
+    onBlur: () => setFocused(false),
+    id,
+    value,
+    style: { ...style, ...(isFocused && { borderColor: 'black' }) },
+    onChange: (e) => onChange?.(e.target.value, e),
+    ...props,
+  }
+
+  const inputEl = textarea ? <StyledTextarea {...inputProps} /> : <StyledInput {...inputProps} />
 
   return (
     <InputGroup {...wrapperProps}>
@@ -73,15 +83,7 @@ const Input: React.FC<InputProps> = ({
         </StyledLabel>
       )) ||
         null}
-      <InputEl
-        onFocus={() => setFocused(true)}
-        onBlur={() => setFocused(false)}
-        id={id}
-        value={value}
-        style={{ ...style, ...(isFocused && { borderColor: 'black' }) }}
-        onChange={(e) => onChange?.(e.target.value, e)}
-        {...props}
-      />
+      {inputEl}
     </InputGroup>
   )
 }

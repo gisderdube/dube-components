@@ -66,20 +66,14 @@ type TextProps = AlignProps & {
 export function Text({ big, small, children, inline, center, right, mobileLeft, mobileRight, mobileCenter, limitWidth, light, bold, ...props }: TextProps & React.HTMLAttributes<HTMLParagraphElement> & {
     inline?: boolean;
 }): JSX.Element;
-export function Heading({ children, center, right, mobileLeft, mobileRight, mobileCenter, limitWidth, light, h2, h3, h4, ...props }: {
-    [x: string]: any;
-    children: any;
-    center: any;
-    right: any;
-    mobileLeft: any;
-    mobileRight: any;
-    mobileCenter: any;
+type HeadingProps = AlignProps & {
     limitWidth?: boolean;
-    light: any;
-    h2: any;
-    h3: any;
-    h4: any;
-}): JSX.Element;
+    light?: boolean;
+    h2?: boolean;
+    h3?: boolean;
+    h4?: boolean;
+};
+export function Heading({ children, center, right, mobileLeft, mobileRight, mobileCenter, limitWidth, light, h2, h3, h4, ...props }: HeadingProps & React.HTMLAttributes<HTMLHeadingElement>): JSX.Element;
 type ButtonProps = {
     disabled?: boolean;
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;

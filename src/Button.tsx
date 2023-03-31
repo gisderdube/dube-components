@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import styled, { css } from 'styled-components'
+import styled, { css, useTheme } from 'styled-components'
 import { defaultTheme } from './utils/theme'
 
 type ButtonProps = {
@@ -47,6 +47,8 @@ StyledButton.defaultProps = {
 export type Ref = HTMLButtonElement
 
 const Button = forwardRef<Ref, ButtonProps>(({ children, disabled, onClick, ...props }, ref) => {
+  const passedTheme = useTheme()
+  console.log('passedTheme:', passedTheme)
   return (
     <StyledButton ref={ref} disabled={disabled} onClick={(e) => (disabled ? null : onClick?.(e))} {...props}>
       {children}
