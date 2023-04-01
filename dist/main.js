@@ -280,7 +280,6 @@ $be3970aed9aa91fc$var$StyledButton.defaultProps = {
 };
 const $be3970aed9aa91fc$var$Button = /*#__PURE__*/ (0, $2EokO$react.forwardRef)(({ children: children , disabled: disabled , onClick: onClick , ...props }, ref)=>{
     const passedTheme = (0, $2EokO$styledcomponents.useTheme)();
-    console.log("passedTheme:", passedTheme);
     return /*#__PURE__*/ (0, $2EokO$reactjsxruntime.jsx)($be3970aed9aa91fc$var$StyledButton, {
         ref: ref,
         disabled: disabled,
