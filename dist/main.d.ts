@@ -80,7 +80,7 @@ type ButtonProps = {
     children: React.ReactNode;
     secondary?: boolean;
 };
-export const Button: import("react").ForwardRefExoticComponent<ButtonProps & import("react").RefAttributes<HTMLButtonElement>>;
+export const Button: React.ForwardRefExoticComponent<ButtonProps & React.RefAttributes<HTMLButtonElement>>;
 type InputProps = {
     textarea?: boolean;
     id?: string;

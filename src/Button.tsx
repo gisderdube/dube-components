@@ -19,6 +19,7 @@ const StyledButton = styled.button<ButtonProps>`
   cursor: pointer;
   background: ${(props) => props.theme.colors.primary};
   border-radius: ${(props) => props.theme.borderRadius};
+  /* transition: 250ms box-shadow ease-in-out; */
 
   ${(props) =>
     props.secondary &&
@@ -38,6 +39,11 @@ const StyledButton = styled.button<ButtonProps>`
         display: none;
       }
     `}
+
+
+  &:hover {
+    box-shadow: 0px 8px 15px rgba(100, 100, 100, 0.2);
+  }
 `
 
 StyledButton.defaultProps = {
@@ -48,6 +54,7 @@ export type Ref = HTMLButtonElement
 
 const Button = forwardRef<Ref, ButtonProps>(({ children, disabled, onClick, ...props }, ref) => {
   const passedTheme = useTheme()
+  console.log('passedTheme:', passedTheme)
   return (
     <StyledButton ref={ref} disabled={disabled} onClick={(e) => (disabled ? null : onClick?.(e))} {...props}>
       {children}

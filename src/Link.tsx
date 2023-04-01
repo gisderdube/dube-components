@@ -29,11 +29,11 @@ const linkStyles = css<LinkProps>`
   }
 `
 
-const StyledLink = styled.a`
+const StyledLink = styled.a<LinkProps>`
   ${linkStyles}
 `
 
-const StyledNextLink = styled(NextLink)`
+const StyledNextLink = styled(NextLink)<LinkProps>`
   ${linkStyles}
 `
 

@@ -6,11 +6,12 @@
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build": "parcel build",
-    "watch": "parcel watch"
+    "predev": "cp package.json ../components-build/package.json",
+    "dev": "nodemon --watch src -e tsx --exec \"npm run dev:exec\"",
+    "dev:exec": "parcel build && cp -r dist ../components-build"
   },
   "engines": {
     "node": "18",
@@ -35,6 +36,7 @@
     "@parcel/packager-ts": "^2.8.3",
     "@parcel/transformer-typescript-types": "^2.8.3",
     "@types/styled-components": "^5.1.26",
+    "nodemon": "^2.0.22",
     "parcel": "^2.8.3",
     "prettier": "^2.8.5",
     "prop-types": "^15.8.1",
