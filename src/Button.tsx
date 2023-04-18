@@ -19,7 +19,7 @@ const StyledButton = styled.button<ButtonProps>`
   cursor: pointer;
   background: ${(props) => props.theme.colors.primary};
   border-radius: ${(props) => props.theme.borderRadius};
-  /* transition: 250ms box-shadow ease-in-out; */
+  transition: 150ms box-shadow ease-in-out;
 
   ${(props) =>
     props.secondary &&

@@ -9,9 +9,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build": "parcel build",
-    "predev": "cp package.json ../components-build/package.json",
     "dev": "nodemon --watch src -e tsx --exec \"npm run dev:exec\"",
-    "dev:exec": "parcel build && cp -r dist ../components-build"
+    "dev:exec": "parcel build && cp -r dist ../coworking/node_modules/dube-components"
   },
   "engines": {
     "node": "18",

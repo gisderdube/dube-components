@@ -98,7 +98,7 @@ export const Column = styled(Flex)<ColumnProps>`
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 950px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     width: 100%;
     padding-left: 0;
     padding-right: 0;
@@ -110,7 +110,7 @@ export default Flex
 export const LeftColumn = styled(Column)<ColumnProps>`
   align-items: flex-end;
 
-  @media (max-width: 950px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     align-items: center;
   }
 `
@@ -118,7 +118,7 @@ export const LeftColumn = styled(Column)<ColumnProps>`
 export const RightColumn = styled(Column)<ColumnProps>`
   align-items: flex-start;
 
-  @media (max-width: 950px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     align-items: center;
   }
 `

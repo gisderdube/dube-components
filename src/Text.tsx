@@ -12,7 +12,7 @@ export type AlignProps = {
 
 export const alignStyles = css<AlignProps>`
   text-align: ${(p) => (p.center ? 'center' : p.right ? 'right' : 'left')};
-  @media (max-width: 950px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     ${(props) =>
       props.mobileCenter &&
       css`

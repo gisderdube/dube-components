@@ -1,5 +1,6 @@
 export type Theme = {
   rootSize: string
+  breakpoints: { md: string }
   colors: {
     light: string
     dark: string
@@ -15,6 +16,7 @@ export type Theme = {
 
 export const defaultTheme = {
   rootSize: '16px',
+  breakpoints: { md: '950px' },
   colors: {
     light: '#fff',
     dark: '#333',

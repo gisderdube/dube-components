@@ -93,7 +93,7 @@ const $d9e1691da1442c1e$export$816b5d811295e6bc = (0, ($parcel$interopDefault($2
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 950px) {
+  @media (max-width: ${(props)=>props.theme.breakpoints.md}) {
     width: 100%;
     padding-left: 0;
     padding-right: 0;
@@ -103,14 +103,14 @@ var $d9e1691da1442c1e$export$2e2bcd8739ae039 = $d9e1691da1442c1e$var$Flex;
 const $d9e1691da1442c1e$export$4cb61b3787083a8b = (0, ($parcel$interopDefault($2EokO$styledcomponents)))($d9e1691da1442c1e$export$816b5d811295e6bc)`
   align-items: flex-end;
 
-  @media (max-width: 950px) {
+  @media (max-width: ${(props)=>props.theme.breakpoints.md}) {
     align-items: center;
   }
 `;
 const $d9e1691da1442c1e$export$d274d05a02cf9d7c = (0, ($parcel$interopDefault($2EokO$styledcomponents)))($d9e1691da1442c1e$export$816b5d811295e6bc)`
   align-items: flex-start;
 
-  @media (max-width: 950px) {
+  @media (max-width: ${(props)=>props.theme.breakpoints.md}) {
     align-items: center;
   }
 `;
@@ -124,6 +124,9 @@ const $d9e1691da1442c1e$export$d274d05a02cf9d7c = (0, ($parcel$interopDefault($2
 
 const $f1468241bb96998c$export$164de7ab8df77ef0 = {
     rootSize: "16px",
+    breakpoints: {
+        md: "950px"
+    },
     colors: {
         light: "#fff",
         dark: "#333",
@@ -140,7 +143,7 @@ const $f1468241bb96998c$export$164de7ab8df77ef0 = {
 
 const $88a3776bdbb5bf4b$export$ea729cd984bbd8bf = (0, $2EokO$styledcomponents.css)`
   text-align: ${(p)=>p.center ? "center" : p.right ? "right" : "left"};
-  @media (max-width: 950px) {
+  @media (max-width: ${(props)=>props.theme.breakpoints.md}) {
     ${(props)=>props.mobileCenter && (0, $2EokO$styledcomponents.css)`
         text-align: center;
       `}
@@ -259,7 +262,7 @@ const $be3970aed9aa91fc$var$StyledButton = (0, ($parcel$interopDefault($2EokO$st
   cursor: pointer;
   background: ${(props)=>props.theme.colors.primary};
   border-radius: ${(props)=>props.theme.borderRadius};
-  /* transition: 250ms box-shadow ease-in-out; */
+  transition: 150ms box-shadow ease-in-out;
 
   ${(props)=>props.secondary && (0, $2EokO$styledcomponents.css)`
       background: transparent;
