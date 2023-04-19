@@ -53,8 +53,6 @@ StyledButton.defaultProps = {
 export type Ref = HTMLButtonElement
 
 const Button = forwardRef<Ref, ButtonProps>(({ children, disabled, onClick, ...props }, ref) => {
-  const passedTheme = useTheme()
-  console.log('passedTheme:', passedTheme)
   return (
     <StyledButton ref={ref} disabled={disabled} onClick={(e) => (disabled ? null : onClick?.(e))} {...props}>
       {children}

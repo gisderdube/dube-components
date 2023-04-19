@@ -1,4 +1,4 @@
-import React from "react";
+import React, { AnchorHTMLAttributes } from "react";
 export const Container: import("styled-components").StyledComponent<"div", any, {}, never>;
 type FlexProps = {
     inline?: boolean;
@@ -97,6 +97,7 @@ type LinkProps = {
     external?: boolean;
     href: string;
     lg?: boolean;
+    target: AnchorHTMLAttributes<HTMLAnchorElement>['target'];
 };
 export const Link: React.FC<LinkProps>;
 

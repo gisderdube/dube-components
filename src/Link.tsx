@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { AnchorHTMLAttributes } from 'react'
 import NextLink from 'next/link'
 import styled, { css } from 'styled-components'
 import { defaultTheme } from './utils/theme'
@@ -9,6 +9,7 @@ type LinkProps = {
   external?: boolean
   href: string
   lg?: boolean
+  target: AnchorHTMLAttributes<HTMLAnchorElement>['target']
 }
 
 const linkStyles = css<LinkProps>`
