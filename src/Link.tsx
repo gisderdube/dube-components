@@ -9,7 +9,7 @@ type LinkProps = {
   external?: boolean
   href: string
   lg?: boolean
-  target: AnchorHTMLAttributes<HTMLAnchorElement>['target']
+  target?: AnchorHTMLAttributes<HTMLAnchorElement>['target']
 }
 
 const linkStyles = css<LinkProps>`

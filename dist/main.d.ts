@@ -97,7 +97,7 @@ type LinkProps = {
     external?: boolean;
     href: string;
     lg?: boolean;
-    target: AnchorHTMLAttributes<HTMLAnchorElement>['target'];
+    target?: AnchorHTMLAttributes<HTMLAnchorElement>['target'];
 };
 export const Link: React.FC<LinkProps>;
 
